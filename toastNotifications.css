@@ -190,18 +190,3 @@
 .toastNotificationCenter .toast > span.close:focus {
   background-position: -608px -310px;
 }
-.toastNotificationCenter .toast.pop {
-  -webkit-animation: enter 2.5s ease-out 0s 1 normal, exit 2.5s ease-in 5.5s 1 normal;
-  -moz-animation: enter 2.5s ease-out 0s 1 normal, exit 2.5s ease-in 5.5s 1 normal;
-  animation: enter 2.5s ease-out 0s 1 normal, exit 2.5s ease-in 5.5s 1 normal;
-}
-.toastNotificationCenter .toast.enter {
-  -webkit-animation: enter 2.5s ease-out 0s 1 normal;
-  -moz-animation: enter 2.5s ease-out 0s 1 normal;
-  animation: enter 2.5s ease-out 0s 1 normal;
-}
-.toastNotificationCenter .toast.exit {
-  -webkit-animation: exit 2.5s ease-out 0s 1 normal;
-  -moz-animation: exit 2.5s ease-out 0s 1 normal;
-  animation: exit 2.5s ease-out 0s 1 normal;
-}
