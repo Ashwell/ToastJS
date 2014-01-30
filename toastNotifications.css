@@ -1,0 +1,207 @@
+@keyframes toastEnter {
+  0% {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    line-height: 0;
+  }
+  40% {
+    opacity: 0;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+}
+@-webkit-keyframes toastEnter {
+  0% {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    line-height: 0;
+  }
+  40% {
+    opacity: 0;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+}
+@keyframes toastExit {
+  0% {
+    opacity: 1;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+  60% {
+    opacity: 0;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    line-height: 0;
+  }
+}
+@-webkit-keyframes toastExit {
+  0% {
+    opacity: 1;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+  60% {
+    opacity: 0;
+    height: auto;
+    padding: 15px;
+    line-height: normal;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    line-height: 0;
+  }
+}
+.toastNotificationCenter {
+  display: block;
+  position: fixed;
+  top: 70px;
+  bottom: auto;
+  left: auto;
+  right: 50px;
+  width: 500px;
+  padding: 0;
+  margin: 0;
+  background-color: #3c3c3c;
+  border: 1px solid #bababa;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px 0px #3c3c3c;
+  font-family: Helvetica, sans-serif;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 10;
+  -webkit-transition: all all 2800ms linear 0 ease-out 0s;
+  -moz-transition: all all 2800ms linear 0 ease-out 0s;
+  -ms-transition: all all 2800ms linear 0 ease-out 0s;
+  -o-transition: all all 2800ms linear 0 ease-out 0s;
+  transition: all all 2800ms linear 0 ease-out 0s;
+}
+.toastNotificationCenter:empty {
+  opacity: 0;
+  line-height: 0;
+}
+.toastNotificationCenter .toast {
+  display: block;
+  padding: 15px;
+  height: auto;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  border-bottom: 1px solid #bababa;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: all all 2800ms linear 0 ease-out 0s;
+  -moz-transition: all all 2800ms linear 0 ease-out 0s;
+  -ms-transition: all all 2800ms linear 0 ease-out 0s;
+  -o-transition: all all 2800ms linear 0 ease-out 0s;
+  transition: all all 2800ms linear 0 ease-out 0s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+}
+.toastNotificationCenter .toast:last-child {
+  border-bottom: 0 none;
+}
+.toastNotificationCenter .toast:before {
+  display: inline-block;
+  width: 29px;
+  height: 28px;
+  position: absolute;
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: -575px -261px;
+}
+.toastNotificationCenter .toast.info:before {
+  content: "";
+  background-position: -575px -261px;
+}
+.toastNotificationCenter .toast.error:before {
+  content: "";
+  background-position: -605px -261px;
+}
+.toastNotificationCenter .toast.success:before {
+  content: "";
+  background-position: -634px -261px;
+}
+.toastNotificationCenter .toast div.msg {
+  display: inline-block;
+  margin: 7px 0 0 43px;
+}
+.toastNotificationCenter .toast a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #c70207;
+}
+.toastNotificationCenter .toast a:hover,
+.toastNotificationCenter .toast a:focus,
+.toastNotificationCenter .toast a:active {
+  text-decoration: underline;
+}
+.toastNotificationCenter .toast:not(.close) > span.close {
+  display: none;
+}
+.toastNotificationCenter .toast > span.close {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url("img/sprite.png");
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: -608px -292px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+.toastNotificationCenter .toast > span.close:hover,
+.toastNotificationCenter .toast > span.close:active,
+.toastNotificationCenter .toast > span.close:focus {
+  background-position: -608px -310px;
+}
+.toastNotificationCenter .toast.pop {
+  -webkit-animation: enter 2.5s ease-out 0s 1 normal, exit 2.5s ease-in 5.5s 1 normal;
+  -moz-animation: enter 2.5s ease-out 0s 1 normal, exit 2.5s ease-in 5.5s 1 normal;
+  animation: enter 2.5s ease-out 0s 1 normal, exit 2.5s ease-in 5.5s 1 normal;
+}
+.toastNotificationCenter .toast.enter {
+  -webkit-animation: enter 2.5s ease-out 0s 1 normal;
+  -moz-animation: enter 2.5s ease-out 0s 1 normal;
+  animation: enter 2.5s ease-out 0s 1 normal;
+}
+.toastNotificationCenter .toast.exit {
+  -webkit-animation: exit 2.5s ease-out 0s 1 normal;
+  -moz-animation: exit 2.5s ease-out 0s 1 normal;
+  animation: exit 2.5s ease-out 0s 1 normal;
+}
