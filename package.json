@@ -1,0 +1,17 @@
+{
+  "name": "toastJS",
+  "version": "0.0.1",
+  "description": "A toast style notification module for ES5 browsers.",
+  "main": "toastNotifications.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ashwell/ToastJS.git"
+  },
+  "author": "Ryan Bogle <ryan.bogle@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ashwell/ToastJS/issues"
+  },
+  "homepage": "https://github.com/Ashwell/ToastJS"
+}
