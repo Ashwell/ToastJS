@@ -5,6 +5,11 @@
   "authors": [
     "Ryan Bogle <ryan.bogle@gmail.com>"
   ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
   "description": "A toast style notification module for ES5 browsers.",
   "main": "toastNotification.js",
   "license": "MIT",
